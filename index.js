@@ -10,7 +10,7 @@ app.post('/', (req, res, next) => {
   console.log('Received incoming deploy hook');
   console.log(req.body);
 
-  const text = `${req.body.app} was deployed to ${req.body.url} by ${req.body.user}`;
+  const text = `\`${req.body.app}@${req.body.head}\` was deployed to ${req.body.url}`;
 
   const body = JSON.stringify({ text });
 
