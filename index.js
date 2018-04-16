@@ -12,15 +12,13 @@ app.post('/', (req, res, next) => {
 
   const text = `App: ${req.body.app} was deployed to ${req.body.url}`;
 
-  const body = {
-    payload: encodeURI(JSON.stringify({
+  const body = JSON.stringify({
       channel: process.env.SLACK_CHANNEL || '#general',
       text
-    }))
-  };
+    });
 
   const headers = {
-    'Content-type': 'application/x-www-form-urlencoded'
+    'Content-type': 'application/json'
   };
 
   console.log('Sending payload to slack');
