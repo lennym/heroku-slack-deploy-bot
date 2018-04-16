@@ -12,12 +12,12 @@ app.post('/', (req, res, next) => {
 
   const text = `App: ${req.body.app} was deployed to ${req.body.url}`;
 
-  const body = JSON.stringify({
-    payload: {
+  const body = {
+    payload: JSON.stringify({
       channel: process.env.SLACK_CHANNEL || '#general',
       text
-    }
-  });
+    })
+  };
 
   const headers = {
     'Content-type': 'application/x-www-form-urlencoded'
