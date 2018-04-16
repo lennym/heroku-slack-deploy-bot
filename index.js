@@ -28,7 +28,8 @@ app.post('/', (req, res, next) => {
 
   fetch.post(process.env.SLACK_URL, { body, headers }).text
   .then(text => {
-    console.log('Sent successfully');
+    console.log('Received response');
+    console.log(text);
     res.send('ok');
   })
   .catch(next);
