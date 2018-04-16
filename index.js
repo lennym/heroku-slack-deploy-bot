@@ -12,10 +12,7 @@ app.post('/', (req, res, next) => {
 
   const text = `${req.body.app} was deployed to ${req.body.url} by ${req.body.user}`;
 
-  const body = JSON.stringify({
-      channel: process.env.SLACK_CHANNEL || '#general',
-      text
-    });
+  const body = JSON.stringify({ text });
 
   const headers = {
     'Content-type': 'application/json'
