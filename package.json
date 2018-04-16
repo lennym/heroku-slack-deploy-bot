@@ -1,0 +1,29 @@
+{
+  "name": "heroku-slack-deploy-bot",
+  "version": "1.0.0",
+  "description": "Convert heroku webhooks to slack hooks",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon -r dotenv/config index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lennym/heroku-slack-deploy-bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lennym/heroku-slack-deploy-bot/issues"
+  },
+  "homepage": "https://github.com/lennym/heroku-slack-deploy-bot#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "r2": "^2.0.1"
+  },
+  "devDependencies": {
+    "dotenv": "^5.0.1",
+    "nodemon": "^1.17.3"
+  }
+}
