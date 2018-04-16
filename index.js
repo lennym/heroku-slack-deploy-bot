@@ -10,7 +10,7 @@ app.post('/', (req, res, next) => {
   console.log('Received incoming deploy hook');
   console.log(req.body);
 
-  const text = `App: ${req.body.app} was deployed to ${req.body.url}`;
+  const text = `${req.body.app} was deployed to ${req.body.url} by ${req.body.user}`;
 
   const body = JSON.stringify({
       channel: process.env.SLACK_CHANNEL || '#general',
